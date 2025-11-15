@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Design | Neo-Brutalista</title>
+    
+    <!-- 1. Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. Fontes (Trap Sans Serif) -->
+    <link href="https://api.fontshare.com/v2/css?f[]=trap@800,400&display=swap" rel="stylesheet">
+    
+    <!-- 3. SVG Logo (Definição como <symbol>) -->
+    <svg style="display: none;">
+        <symbol id="logo-svg" viewBox="0 0 63.1 65.3">
+            <g>
+                <path d="M22.99,65.03c-1.5,0-2.89-.28-4.19-.85-1.3-.56-2.44-1.33-3.41-2.31-.98-.98-1.75-2.11-2.31-3.41-.57-1.3-.85-2.69-.85-4.19s.28-2.89.85-4.19c.56-1.3,1.33-2.43,2.31-3.41.98-.98,2.11-1.75,3.41-2.31,1.3-.56,2.69-.85,4.19-.85s2.89.28,4.19.85,2.43,1.34,3.41,2.31c.98.98,1.75,2.11,2.31,3.41.56,1.3.85,2.69.85,4.19s-.28,2.89-.85,4.19c-.56,1.3-1.33,2.43-2.31,3.41-.98-.98-2.11,1.75-3.41,2.31s-2.69.85-4.19.85ZM22.99,61.13c.95,0,1.82-.18,2.63-.55.81-.37,1.51-.85,2.11-1.46.59-.61,1.06-1.33,1.4-2.17.34-.84.5-1.73.5-2.68s-.17-1.84-.5-2.68c-.34-.84-.8-1.56-1.4-2.17-.6-.61-1.3-1.1-2.11-1.46-.81-.37-1.69-.55-2.63-.55s-1.82.18-2.63.55c-.81.37-1.51.85-2.11-1.46-.59.61-1.06,1.34-1.4,2.17-.34.84-.5,1.73-.5,2.68s.17,1.84.5,2.68c.34.84.8,1.56,1.4,2.17.6.61,1.3,1.1,2.11,1.46.81.37,1.69.55,2.63.55Z" />
+                <path d="M37.49,21.03l-.77,1.04c-.14.2-.3.35-.47.43-.17.09-.46.07-.86-.04-.4-.14-.75-.23-1.06-.26-.3-.03-.6-.04-.88-.04-1.01,0-1.96.19-2.87.58-.91.39-1.7.91-2.39,1.57s-1.24,1.44-1.66,2.33c-.42.89-.63,1.84-.63,2.85,0,.75.12,1.48.37,2.2.24.72.58,1.37,1.01,1.94.11.14.19.33.24.56.04.23,0,.46-.15.69l-2.03,2.8c-.49.66-.73,1.31-.73,1.94v1.08c0,.4.11.72.34.95.23.23.55.35.95.35h7.42c1.09,0,1.99.28,2.7.84.7.56,1.06,1.3,1.06,2.22,0,.66-.13,1.19-.39,1.57-.26.39-.58.71-.95.97-.72.55-.83,1.14-.35,1.77l.86.99c.23.26.5.42.82.49.32.07.63,0,.95-.19.72-.49,1.39-1.18,2.01-2.07.62-.89.93-2.07.93-3.54,0-1.01-.2-1.92-.6-2.74-.4-.82-.96-1.52-1.66-2.09-.71-.58-1.52-1.02-2.46-1.34-.94-.32-1.92-.47-2.96-.47h-3.32c-.52,0-.65-.2-.39-.6l.69-.95c.14-.23.32-.37.52-.41.2-.04.42-.04.65.02.26.06.56.12.91.17.34.06.72.09,1.12.09,1.01,0,1.96-.19,2.87-.56.91-.37,1.7-.89,2.39-1.53.69-.65,1.24-1.42,1.66-2.31.42-.89.63-1.84.63-2.85,0-1.35-.36-2.62-1.08-3.8-.14-.23-.26-.48-.34-.73-.07-.22-.05-.43.05-.62h7.24c1.19,0,2.17.31,2.94.92.77.61,1.15,1.42,1.15,2.42,0,.72-.14,1.29-.42,1.72-.28.42-.63.78-1.04,1.06-.78.6-.91,1.24-.37,1.93l.94,1.08c.25.28.55.46.89.54.34.08.69,0,1.03-.21.78-.53,1.51-1.29,2.19-2.26.67-.97,1.01-2.26,1.01-3.86,0-1.1-.22-2.09-.66-2.99-.44-.89-1.04-1.65-1.81-2.28-.77-.63-1.66-1.11-2.68-1.46-1.02-.34-2.09-.52-3.22-.52h-3.62c-.56,0-.71-.22-.42-.66l.75-1.03c.16-.25.34-.4.56-.45.22-.05.45-.04.71.02.28.06.61.13.99.19.38.06.78.09,1.22.09,1.1,0,2.14-.2,3.13-.61.99-.41,1.86-.97,2.61-1.67.75-.7,1.35-1.54,1.81-2.51.45-.97.68-2.01.68-3.1,0-1.47-.39-2.85-1.18-4.14-.16-.25-.28-.52-.38-.8-.09-.28-.06-.55.1-.8l1.5-2.02c.25-.34.35-.7.31-1.06-.05-.36-.24-.67-.59-.92l-.94-.66c-.34-.25-.7-.35-1.06-.31-.36.05-.67.24-.92.59l-1.5,2.02c-.16.22-.33.38-.52.47-.19.09-.5.08-.94-.05-.44-.16-.82-.25-1.15-.28s-.65-.05-.96-.05c-1.1,0-2.14.21-3.13.63-.99.42-1.86,1-2.61,1.72-.75.72-1.36,1.57-1.81,2.54-.46.97-.68,2.01-.68,3.1,0,.82.13,1.62.4,2.4.27.78.63,1.49,1.1,2.11.12.16.21.36.26.61.05.25,0,.5-.16.75M36.8,30.94c-.2.45-.47.84-.8,1.16-.33.33-.72.59-1.16.78-.45.19-.91.28-1.4.28s-.96-.09-1.4-.28c-.45-.19-.83-.45-1.16-.78-.33-.33-.6-.72-.8-1.16-.2-.44-.3-.93-.3-1.45s.1-1,.3-1.45c.2-.44.47-.83.8-1.16.33-.33.72-.59,1.16-.78.45-.19.91.28,1.4.28s.96.09,1.4.28c.45.19.83.45,1.16.78.33.33.6.72.8,1.16.2.45.3.93.3,1.45s-.1,1-.3,1.45ZM50.65,12.28c-.22.49-.51.91-.87,1.27-.36.36-.78.64-1.27.85-.49.2-1,.31-1.53.31s-1.04-.1-1.53-.31c-.49-.2-.91-.49-1.27-.85-.36-.36-.65-.78-.87-1.27-.22-.48-.33-1.01-.33-1.58s.11-1.09.33-1.58c.22-.48.51-.91.87-1.27.36-.36.78-.64,1.27-.84.48-.2.99-.31,1.53-.31s1.04.1,1.53.31c.49.2.91.49,1.27.84.36.36.65.78.87,1.27.22.49.33,1.01.33,1.58s-.11,1.09-.33,1.58Z" />
+                <path d="M2.54,65.3c-.79,0-1.41-.23-1.86-.68s-.68-1.07-.68-1.86V2.63c0-.79.22-1.41.68-1.86S1.75.1,2.54.1h5.65c2.2,0,4.22.37,6.05,1.1,1.83.73,3.4,1.74,4.7,3,1.3,1.27,2.3,2.79,3,4.57.7,1.78,1.06,3.68,1.06,5.71v9.31c0,2.03-.37,3.93-1.1,5.71-.73,1.78-1.73,3.3-3,4.57s-2.79,2.27-4.57,3-3.71,1.1-5.8,1.1h-.07c-.56,0-.84.28-.84.85v23.74c0,.79-.23,1.41-.68,1.86-.45.45-1.07.68-1.86.68h-2.54ZM15.38,14.48c0-2.14-.71-3.88-2.12-5.2-1.41-1.32-3.1-1.99-5.08-1.99h.27c-.56,0-.84.28-.84.84v22c0,.56.28.85.84.85h-.27c2.14,0,3.88-.66,5.2-1.99,1.33-1.32,1.99-3.06,1.99-5.2v-9.31Z" />
+                <rect x="59.44" width="3.65" height="65.27" rx=".45" ry=".45" />
+            </g>
+        </symbol>
+    </svg>
+
+    <!-- 4. Configuração do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Trap', 'sans-serif'], // Define 'Trap' como a fonte sans-serif padrão
+                    },
+                    colors: {
+                        'brutal-base': '#FFFFFF',
+                        'brutal-bg': '#111111',
+                        'brutal-accent': '#FF0055', // Rosa neon
+                        'vector-blue': '#3CB9EC', // Azul
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 5. CSS Customizado -->
+    <style>
+        /* Animação de Fundo Gradiente (Neo-Vectorheart) */
+        @keyframes subtle-aurora {
+          0% {
+            background-position: 0% 50%, 50% 100%, 100% 50%;
+          }
+          25% {
+            background-position: 50% 0%, 80% 50%, 0% 100%;
+          }
+          50% {
+            background-position: 100% 50%, 50% 0%, 0% 0%;
+          }
+          75% {
+            background-position: 50% 100%, 0% 50%, 80% 100%;
+          }
+          100% {
+            background-position: 0% 50%, 50% 100%, 100% 50%;
+          }
+        }
+
+        .animated-gradient-bg {
+            /* Fundo base sólido e escuro */
+            background-color: #111111; 
+            
+            /* Múltiplas luzes de gradiente radial (aurora) */
+            background-image: 
+                /* Luz Rosa (brutal-accent) */
+                radial-gradient(at 0% 50%, hsla(340, 100%, 50%, 0.15), transparent 50%),
+                /* Luz Azul (vector-blue) */
+                radial-gradient(at 50% 100%, hsla(196, 84%, 55%, 0.15), transparent 50%),
+                /* Luz Branca sutil (para profundidade) */
+                radial-gradient(at 100% 50%, hsla(0, 0%, 100%, 0.05), transparent 50%);
+            
+            background-size: 200% 200%; /* Tamanho das "auroras" */
+            background-repeat: no-repeat;
+            
+            /* Aplicando a nova animação */
+            animation: subtle-aurora 25s ease-in-out infinite;
+        }
+
+        /* Estilo Header com Scroll (Glassmorphism) */
+        .header-scrolled {
+            background-color: rgba(17, 17, 17, 0.7); /* brutal-bg com 70% de opacidade */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom-width: 1px;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Sombra Brutalista (Nu-Brutalism) */
+        .brutal-shadow {
+            /* Sombra para botões em fundo claro/colorido */
+            box-shadow: 6px 6px 0px #000;
+            border: 3px solid #000;
+            transition: all 0.2s ease-out;
+        }
+        .brutal-shadow:hover {
+            box-shadow: 3px 3px 0px #000;
+            transform: translate(3px, 3px);
+        }
+
+        .brutal-shadow-white {
+            /* Sombra para cards em fundo escuro */
+            box-shadow: 8px 8px 0px #FFF;
+            border: 3px solid #FFF;
+            transition: all 0.2s ease-out;
+        }
+        .brutal-shadow-white:hover {
+            box-shadow: 4px 4px 0px #FFF;
+            transform: translate(4px, 4px);
+        }
+
+        /* Animação de Fade-in (Scroll) */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animação de fade-in para itens individuais (cards) */
+        .fade-in-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-item.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Efeito Stagger (atraso) para os cards aparecerem em sequência */
+        .grid .fade-in-item:nth-child(1) { transition-delay: 0.1s; }
+        .grid .fade-in-item:nth-child(2) { transition-delay: 0.2s; }
+        .grid .fade-in-item:nth-child(3) { transition-delay: 0.3s; }
+
+        /* Animação Flutuante (Sobre) */
+        @keyframes float-icon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .floating-icon {
+            animation: float-icon 4s ease-in-out infinite;
+        }
+        
+        /* Animação de Pulso para o CTA (Contato) */
+        @keyframes pulse-bg-cta {
+          0%, 100% { background-color: #FF0055; } /* brutal-accent */
+          50% { background-color: #ff4d8a; } /* Tom mais claro de rosa */
+        }
+        .animate-pulse-cta {
+            animation: pulse-bg-cta 2s ease-in-out infinite;
+        }
+        .animate-pulse-cta:hover {
+            animation: none; /* Desliga o pulso no hover para a animação de hover normal assumir */
+        }
+
+        /* Efeito Zoom na Imagem do Hero */
+        .hero-block-img {
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .hero-block:hover .hero-block-img {
+            transform: scale(1.05); /* Zoom sutil */
+        }
+        
+        /* Transição suave para parallax */
+        .parallax-element {
+            transition: transform 0.1s linear;
+        }
+
+        /* ===== Cursor Customizado ===== */
+        html, body, a, button {
+            cursor: none; /* Esconde o cursor padrão */
+        }
+        .cursor-dot, .cursor-aura {
+            position: fixed;
+            top: 0; 
+            left: 0;
+            border-radius: 50%;
+            pointer-events: none; /* Permite clicar "através" do cursor */
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            opacity: 0; /* Começa invisível */
+            transition: opacity 0.3s ease-out, width 0.3s ease-out, height 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out;
+        }
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #FF0055; /* brutal-accent */
+            /* O 'dot' não tem transição de 'transform' para ser instantâneo */
+        }
+        .cursor-aura {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #3CB9EC; /* vector-blue */
+            /* A 'aura' tem transição de transform para o efeito de lag */
+            transition: transform 0.15s ease-out, opacity 0.3s ease-out, width 0.3s ease-out, height 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out;
+        }
+
+        /* Estado Hover do Cursor */
+        .cursor-dot.cursor-hover {
+            opacity: 0; /* Esconde o ponto no hover */
+        }
+        .cursor-aura.cursor-hover {
+            width: 60px;
+            height: 60px;
+            background-color: hsla(196, 84%, 55%, 0.2); /* Fundo azul semi-transparente */
+            border-color: transparent;
+        }
+        
+        /* ===== NOVO: Estilos da Galeria Lightbox ===== */
+        #lightbox-prev, #lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px; /* 3rem */
+            height: 48px; /* 3rem */
+            background-color: #FF0055; /* brutal-accent */
+            border-radius: 9999px; /* rounded-full */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            z-index: 110; /* Acima da imagem */
+            /* Aplica a sombra brutalista */
+            box-shadow: 6px 6px 0px #000;
+            border: 3px solid #000;
+            transition: all 0.2s ease-out;
+        }
+        #lightbox-prev:hover, #lightbox-next:hover {
+            box-shadow: 3px 3px 0px #000;
+            /* Combina as transformações para não quebrar o hover */
+            transform: translate(3px, 3px) translateY(-50%); 
+        }
+        #lightbox-prev {
+            left: 1rem; /* 16px */
+        }
+        #lightbox-next {
+            right: 1rem; /* 16px */
+        }
+        /* Estilo para quando os botões estão escondidos */
+        #lightbox-prev.hidden, #lightbox-next.hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="animated-gradient-bg text-brutal-base font-sans font-normal leading-relaxed">
+    
+    <!-- Elementos do Cursor -->
+    <div id="cursor-dot" class="cursor-dot"></div>
+    <div id="cursor-aura" class="cursor-aura"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header id="main-header" class="sticky top-0 z-50 transition-all duration-300 h-[80px]">
+        <nav class="container mx-auto px-6 flex justify-between items-center h-full">
+            <!-- Logo -->
+            <a href="#home" title="Início" class="block w-10 md:w-12">
+                <svg class="fill-current text-brutal-base hover:text-brutal-accent transition-colors duration-200" viewBox="0 0 63.1 65.3">
+                    <use xlink:href="#logo-svg"></use>
+                </svg>
+            </a>
+
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="font-extrabold text-lg hover:text-brutal-accent transition-colors">Sobre</a>
+                <a href="#projects" class="font-extrabold text-lg hover:text-brutal-accent transition-colors">Projetos</a>
+                <a href="#contact" class="font-extrabold text-lg hover:text-brutal-accent transition-colors">Contato</a>
+            </div>
+
+            <!-- Botão Hamburger (Mobile) -->
+            <button id="menu-btn" class="md:hidden z-50">
+                <svg class="w-8 h-8 text-brutal-base" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                    <path id="menu-icon-close" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" class="hidden" />
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Menu Mobile (Dropdown) -->
+        <div id="menu-mobile" class="hidden absolute top-0 left-0 w-full h-screen bg-brutal-bg/95 backdrop-blur-lg flex-col justify-center items-center space-y-8">
+            <a href="#about" class="font-extrabold text-3xl hover:text-brutal-accent transition-colors">Sobre</a>
+            <a href="#projects" class="font-extrabold text-3xl hover:text-brutal-accent transition-colors">Projetos</a>
+            <a href="#contact" class="font-extrabold text-3xl hover:text-brutal-accent transition-colors">Contato</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== SEÇÃO HERO ===== -->
+        <!-- Ocupa a altura da tela menos o header (80px) -->
+        <section id="home" class="h-[calc(100vh-80px)] grid grid-cols-1 md:grid-cols-2 grid-rows-3 md:grid-rows-2 gap-4 p-4">
+
+            <!-- Bloco 1: Gráficos (Topo, 2 colunas) -->
+            <a href="#projects-graficos" class="hero-block group relative overflow-hidden row-span-1 md:col-span-2 md:row-span-1 rounded-lg brutal-shadow-white flex items-center justify-center text-center">
+                <!-- Imagem de Fundo -->
+                <img src="https://i.imgur.com/d2eIA7m.png" 
+                     alt="Projeto de design gráfico abstrato" 
+                     class="absolute inset-0 w-full h-full object-cover hero-block-img"
+                     onerror="this.src='https://placehold.co/1600x600/FF0055/FFFFFF?text=Imagem que deu errado'">
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-black bg-opacity-70 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                <!-- Texto -->
+                <h2 class="relative z-10 font-extrabold text-4xl md:text-6xl uppercase tracking-wider transition-transform duration-300 group-hover:-translate-y-2">
+                    Projetos Gráficos
+                </h2>
+            </a>
+
+            <!-- Bloco 2: Editorial (Inferior Esquerdo) -->
+            <a href="#projects-editorial" class="hero-block group relative overflow-hidden row-span-1 md:col-span-1 rounded-lg brutal-shadow-white flex items-center justify-center text-center">
+                <!-- Imagem de Fundo -->
+                <img src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=800&h=800&fit=crop" 
+                     alt="Revistas e design editorial" 
+                     class="absolute inset-0 w-full h-full object-cover hero-block-img"
+                     onerror="this.src='https://placehold.co/800x800/3CB9EC/FFFFFF?text=Editorial'">
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-black bg-opacity-70 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                <!-- Texto -->
+                <h2 class="relative z-10 font-extrabold text-4xl md:text-5xl uppercase tracking-wider transition-transform duration-300 group-hover:-translate-y-2">
+                    Editorial
+                </h2>
+            </a>
+
+            <!-- Bloco 3: Produto (Inferior Direito) -->
+            <a href="#projects-produto" class="hero-block group relative overflow-hidden row-span-1 md:col-span-1 rounded-lg brutal-shadow-white flex items-center justify-center text-center">
+                <!-- Imagem de Fundo -->
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&h=800&fit=crop" 
+                     alt="Design de UI/UX e produto digital" 
+                     class="absolute inset-0 w-full h-full object-cover hero-block-img"
+                     onerror="this.src='https://placehold.co/800x800/111111/FFFFFF?text=Produto'">
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-black bg-opacity-70 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                <!-- Texto -->
+                <h2 class="relative z-10 font-extrabold text-4xl md:text-5xl uppercase tracking-wider transition-transform duration-300 group-hover:-translate-y-2">
+                    Produto
+                </h2>
+            </a>
+        </section>
+
+        <!-- ===== SEÇÃO SOBRE ===== -->
+        <section id="about" class="fade-in-section container mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-12 md:gap-24 items-center overflow-hidden">
+            <!-- Coluna da Imagem -->
+            <div class="parallax-element" data-speed="0.08">
+                <img src="https://images.unsplash.com/photo-1572044162444-31d3d3b70af5?q=80&w=800&h=1000&fit=crop" 
+                     alt="Retrato do designer" 
+                     class="rounded-lg brutal-shadow-white object-cover aspect-[4/5]"
+                     onerror="this.src='https://placehold.co/800x1000/111111/FFFFFF?text=Sobre'">
+            </div>
+            
+            <!-- Coluna do Texto -->
+            <div class="relative">
+                <!-- Ícone Flutuante Decorativo -->
+                <svg class="floating-icon absolute -top-8 -left-8 md:-top-12 md:-left-12 w-16 h-16 md:w-20 md:h-20 text-vector-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" />
+                </svg>
+                
+                <h2 class="font-extrabold text-5xl md:text-6xl mb-6 uppercase">Sobre Mim</h2>
+                <p class="text-lg text-gray-200 mb-6">
+                    Eu sou um designer multidisciplinar focado em criar experiências digitais que fundem funcionalidade crua com uma estética futurista. Minha abordagem combina a clareza do brutalismo com a fluidez e a cor do neo-vectorheart.
+                </p>
+                <p class="text-lg text-gray-200 mb-8">
+                    Com mais de 5 anos de experiência, meu objetivo é construir marcas e produtos que não sejam apenas bonitos, mas que também comuniquem com força e propósito.
+                </p>
+                
+                            </div>
+        </section>
+
+        <!-- ===== SEÇÃO PROJETOS ===== -->
+        <section id="projects" class="container mx-auto px-6 py-24 md:py-32">
+            <h2 class="fade-in-section font-extrabold text-5xl md:text-6xl mb-16 text-center uppercase">Projetos</h2>
+
+            <!-- Subseção: Gráficos -->
+            <div id="projects-graficos" class="mb-24">
+                <h3 class="font-extrabold text-3xl md:text-4xl mb-10 border-b-4 border-brutal-accent pb-3 inline-block">
+                    Projetos Gráficos
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                    
+                    <!-- Card de Projeto 1 -->
+                    <!-- NOVO: Adicionado 'data-images' com imagens separadas por vírgula -->
+                    <div class="fade-in-item bg-brutal-bg rounded-lg overflow-hidden brutal-shadow-white parallax-element open-lightbox" 
+                         data-speed="0.05"
+                         data-images="https://i.imgur.com/WCFR0An.png=80&w=800&h=600&fit=crop,https://i.imgur.com/VEEVEj5.png">
+                        <img src="https://i.imgur.com/WCFR0An.png=80&w=800&h=600&fit=crop,https://i.imgur.com/VEEVEj5.png" alt="Projeto 1" class="w-full h-60 object-cover" onerror="this.src='https://placehold.co/800x600/FF0055/FFFFFF?text=Projeto+1'">
+                        <div class="p-6">
+                            <h4 class="font-extrabold text-2xl mb-2">Concurso Oxford de Design</h4>
+                            <p class="text-gray-300 mb-4 text-sm">Concurso em que consistia fazer o design de duas canecas e uma caixa com o tema "o que te faz sorrir".</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-brutal-accent text-white font-bold py-1 px-3 text-xs rounded-sm transition-transform duration-200 hover:-translate-y-1">Photoshop</span>
+                                <span class="bg-vector-blue text-white font-bold py-1 px-3 text-xs rounded-sm transition-transform duration-200 hover:-translate-y-1">Ilustração</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card de Projeto 2 -->
+                    <div class="fade-in-item bg-brutal-bg rounded-lg overflow-hidden brutal-shadow-white parallax-element open-lightbox" 
+                         data-speed="0.08"
+                         data-images="https://i.imgur.com/Bzu2Mgt.pngq=80&w=800&h=600&fit=crop,https://i.imgur.com/tAadeDs.png,https://i.imgur.com/MOsHszK.png,https://i.imgur.com/oj1LvWd.png,https://i.imgur.com/zy0kScz.jpeg">
+                        <img src="https://i.imgur.com/Bzu2Mgt.pngq=80&w=800&h=600&fit=crophttps://i.imgur.com/tAadeDs.png,https://i.imgur.com/MOsHszK.png,https://i.imgur.com/oj1LvWd.png,https://i.imgur.com/zy0kScz.jpeg" alt="Projeto 2" class="w-full h-60 object-cover" onerror="this.src='https://placehold.co/800x600/3CB9EC/FFFFFF?text=Projeto+2'">
+                        <div class="p-6">
+                            <h4 class="font-extrabold text-2xl mb-2">Pôsteres para cervejaria</h4>
+                            <p class="text-gray-300 mb-4 text-sm">Série de pôsteres experimentais explorando a fusão de tipografia suíça e o branding e artes.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-brutal-accent text-white font-bold py-1 px-3 text-xs rounded-sm transition-transform duration-200 hover:-translate-y-1">Pôster</span>
+                                <span class="bg-brutal-base text-brutal-bg font-bold py-1 px-3 text-xs rounded-sm transition-transform duration-200 hover:-translate-y-1">Tipografia</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card de Projeto 3 -->
+                    <div class="fade-in-item bg-brutal-bg rounded-lg overflow-hidden brutal-shadow-white parallax-element open-lightbox" 
+                         data-speed="0.06"
+                         data-images="https://images.unsplash.com/photo-1607427280380-619e3478b3de?q=80&w=800&h=600&fit=crop,https://placehold.co/800x600/111111/FFFFFF?text=Projeto+3+-+Img+2,https://placehold.co/800x600/111111/FFFFFF?text=Projeto+3+-+Img+3">
+                        <img src="https://images.unsplash.com/photo-1607427280380-619e3478b3de?q=80&w=800&h=600&fit=crop" alt="Projeto 3" class="w-full h-60 object-cover" onerror="this.src='https://placehold.co/800x600/111111/FFFFFF?text=Projeto+3'">
+                        <div class="p-6">
+                            <h4 class="font-extrabold text-2xl mb-2">Embalagem "Raw"</h4>
+                            <p class="text-gray-300 mb-4 text-sm">Design de embalagem para uma marca de café, usando materiais crus e impressão em alto relevo.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-vector-blue text-white font-bold py-1 px-3 text-xs rounded-sm transition-transform duration-200 hover:-translate-y-1">Embalagem</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Subseção: Editorial -->
+            <div id="projects-editorial" class="mb-24">
+                <h3 class="fade-in-section font-extrabold text-3xl md:text-4xl mb-10 border-b-4 border-vector-blue pb-3 inline-block">
+                    Projetos Editoriais
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                    <!-- Card de Projeto 4 -->
+                    <div class="fade-in-item bg-brutal-bg rounded-lg overflow-hidden brutal-shadow-white parallax-element open-lightbox" 
+                         data-speed="0.05"
+                         data-images="https://images.unsplash.com/photo-1509024644558-2f56b2439e20?q=80&w=800&h=600&fit=crop,https://placehold.co/800x600/3CB9EC/FFFFFF?text=Projeto+4+-+Img+2">
+                        <img src="https://images.unsplash.com/photo-1509024644558-2f56b2439e20?q=80&w=800&h=600&fit=crop" alt="Projeto 4" class="w-full h-60 object-cover" onerror="this.src='https://placehold.co/800x600/3CB9EC/FFFFFF?text=Projeto+4'">
+                        <div class="p-6">
+                            <h4 class="font-extrabold text-2xl mb-2">Zine "Concreto"</h4>
+                            <p class="text-gray-300 mb-4 text-sm">Publicação independente sobre arquitetura brutalista e espaço urbano. Layout rígido e fotos P&B.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-vector-blue text-white font-bold py-1 px-3 text-xs rounded-sm transition-transform duration-200 hover:-translate-y-1">Zine</span>
+                                <span class="bg-brutal-base text-brutal-bg font-bold py-1 px-3 text-xs rounded-sm transition-transform duration-200 hover:-translate-y-1">InDesign</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card de Projeto 5 -->
+                    <div class="fade-in-item bg-brutal-bg rounded-lg overflow-hidden brutal-shadow-white parallax-element open-lightbox" 
+                         data-speed="0.08"
+                         data-images="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&h=600&fit=crop">
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&h=600&fit=crop" alt="Projeto 5" class="w-full h-60 object-cover" onerror="this.src='https://placehold.co/800x600/FF0055/FFFFFF?text=Projeto+5'">
+                        <div class="p-6">
+                            <h4 class="font-extrabold text-2xl mb-2">Catálogo "Vector"</h4>
+                            <p class="text-gray-300 mb-4 text-sm">Catálogo de exposição de arte digital, com grids dinâmicos e uso expressivo da cor.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-brutal-accent text-white font-bold py-1 px-3 text-xs rounded-sm transition-transform duration-200 hover:-translate-y-1">Catálogo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subseção: Produto -->
+            <div id="projects-produto">
+                <h3 class="fade-in-section font-extrabold text-3xl md:text-4xl mb-10 border-b-4 border-brutal-accent pb-3 inline-block">
+                    Projetos de Produto
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                    <!-- Card de Projeto 6 -->
+                    <div class="fade-in-item bg-brutal-bg rounded-lg overflow-hidden brutal-shadow-white parallax-element open-lightbox" 
+                         data-speed="0.07"
+                         data-images="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&h=600&fit=crop,https://placehold.co/800x600/111111/FFFFFF?text=Projeto+6+-+Img+2">
+                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&h=600&fit=crop" alt="Projeto 6" class="w-full h-60 object-cover" onerror="this.src='https://placehold.co/800x600/111111/FFFFFF?text=Projeto+6'">
+                        <div class="p-6">
+                            <h4 class="font-extrabold text-2xl mb-2">App "Focus"</h4>
+                            <p class="text-gray-300 mb-4 text-sm">Aplicativo de produtividade com interface minimalista e funcional, sem distrações. Foco em UX direto.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-brutal-base text-brutal-bg font-bold py-1 px-3 text-xs rounded-sm transition-transform duration-200 hover:-translate-y-1">UI/UX</span>
+                                <span class="bg-vector-blue text-white font-bold py-1 px-3 text-xs rounded-sm transition-transform duration-200 hover:-translate-y-1">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== SEÇÃO CONTATO ===== -->
+        <section id="contact" class="fade-in-section bg-vector-blue text-brutal-bg py-24 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="font-extrabold text-5xl md:text-6xl mb-6 uppercase">Vamos Conversar.</h2>
+                <p class="text-2xl mb-12 max-w-2xl mx-auto font-normal">
+                    Disponível para freela, projetos e um café virtual.
+                </p>
+                
+                <!-- Botão Brutalista -->
+                <a href="https://wa.me/5532988239647" 
+                   target="_blank" 
+                   class="inline-block bg-brutal-accent text-white font-extrabold text-xl md:text-2xl py-4 px-10 rounded-lg brutal-shadow border-4 border-black transition-all hover:bg-brutal-bg hover:text-brutal-accent animate-pulse-cta">
+                    Chamar no WhatsApp
+                </a>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="text-center py-12 px-6">
+        <p class="text-gray-400">Design e Código por [Seu Nome] - 2024</p>
+        <p class="text-xs text-gray-600 mt-2">Construído com Lenis, Tailwind e amor pelo Brutalismo.</p>
+    </footer>
+
+
+    <!-- ===== LIGHTBOX (VISUALIZADOR) ===== -->
+    <div id="lightbox" class="hidden fixed inset-0 z-[100] items-center justify-center bg-brutal-bg/90 backdrop-blur-lg">
+        
+        <!-- Botão Anterior (NOVO) -->
+        <button id="lightbox-prev" class="hidden">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+
+        <!-- Conteúdo Principal do Lightbox -->
+        <div id="lightbox-content" class="relative">
+            <!-- Imagem do Lightbox -->
+            <img id="lightbox-img" src="" alt="Visualização do Projeto" class="max-w-[90vw] max-h-[90vh] rounded-lg border-4 border-brutal-base">
+            
+            <!-- Botão de Fechar -->
+            <button id="lightbox-close" class="absolute -top-4 -right-4 w-12 h-12 bg-brutal-accent rounded-full flex items-center justify-center brutal-shadow z-[120]">
+                <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Botão Próximo (NOVO) -->
+        <button id="lightbox-next" class="hidden">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
+
+    </div>
+
+
+    <!-- 6. Scripts (Lenis.js e JS Customizado) -->
+    
+    <!-- Biblioteca Lenis.js -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- Nosso JavaScript -->
+    <script>
+        window.addEventListener('load', (event) => {
+
+            // --- 1. INICIALIZAÇÃO DO LENIS (SCROLL SUAVE) ---
+            const lenis = new Lenis();
+
+            // --- Seletores Globais ---
+            const header = document.getElementById('main-header');
+            const parallaxElements = document.querySelectorAll('.parallax-element');
+            const sections = document.querySelectorAll('.fade-in-section, .fade-in-item');
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('menu-mobile');
+            const menuIconOpen = document.getElementById('menu-icon-open');
+            const menuIconClose = document.getElementById('menu-icon-close');
+            const cursorDot = document.getElementById('cursor-dot');
+            const cursorAura = document.getElementById('cursor-aura');
+            
+            // MUDANÇA: Adicionado #lightbox-prev e #lightbox-next
+            const interactiveElements = document.querySelectorAll(
+                'a, button, .hero-block, .open-lightbox, #lightbox-close, #lightbox-prev, #lightbox-next'
+            );
+
+            // Seletores do Lightbox
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxClose = document.getElementById('lightbox-close');
+            const projectCards = document.querySelectorAll('.open-lightbox');
+            
+            // NOVO: Seletores da Galeria
+            const lightboxPrev = document.getElementById('lightbox-prev');
+            const lightboxNext = document.getElementById('lightbox-next');
+
+            // NOVO: Estado da Galeria
+            let currentGalleryImages = [];
+            let currentImageIndex = 0;
+
+
+            // --- Função RAF (Loop de Animação) ---
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+
+
+            // --- 2. LINKS ÂNCORA COM LENIS ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Fecha o menu mobile se estiver aberto
+                        if (mobileMenu.classList.contains('flex')) {
+                            mobileMenu.classList.remove('flex');
+                            mobileMenu.classList.add('hidden');
+                            menuIconOpen.classList.remove('hidden');
+                            menuIconClose.classList.add('hidden');
+                        }
+                        
+                        lenis.scrollTo(targetElement, {
+                            offset: -79 // altura do header (80px) - 1px de borda
+                        });
+                    }
+                });
+            });
+
+
+            // --- 3. EFEITO DO HEADER (GLASSMORPHISM NO SCROLL) E PARALLAX ---
+            const windowHeight = window.innerHeight;
+
+            lenis.on('scroll', (e) => {
+                // Efeito do Header
+                if (e.scroll > 50) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+
+                // Efeito Parallax
+                parallaxElements.forEach(el => {
+                    const speed = parseFloat(el.getAttribute('data-speed')) || 0.1;
+                    const rect = el.getBoundingClientRect();
+                    
+                    if (rect.top < windowHeight && rect.bottom > 0) {
+                        const move = (rect.top * -1 * speed);
+                        el.style.transform = `translateY(${move}px)`;
+                    }
+                });
+            });
+
+
+            // --- 4. ANIMAÇÃO DE FADE-IN (INTERSECTION OBSERVER) ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, { 
+                threshold: 0.1 
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+
+            // --- 5. MENU MOBILE (HAMBURGER TOGGLE) ---
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+                menuIconOpen.classList.toggle('hidden');
+                menuIconClose.classList.toggle('hidden');
+            });
+
+            // --- 6. CURSOR CUSTOMIZADO ---
+            window.addEventListener('mousemove', (e) => {
+                const posX = e.clientX;
+                const posY = e.clientY;
+                
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+                cursorAura.style.left = `${posX}px`;
+                cursorAura.style.top = `${posY}px`;
+
+                cursorDot.style.opacity = '1';
+                cursorAura.style.opacity = '1';
+            });
+
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursorDot.classList.add('cursor-hover');
+                    cursorAura.classList.add('cursor-hover');
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursorDot.classList.remove('cursor-hover');
+                    cursorAura.classList.remove('cursor-hover');
+                });
+            });
+            
+            document.addEventListener('mouseleave', () => {
+                cursorDot.style.opacity = '0';
+                cursorAura.style.opacity = '0';
+            });
+            document.addEventListener('mouseenter', () => {
+                cursorDot.style.opacity = '1';
+                cursorAura.style.opacity = '1';
+            });
+
+            
+            // --- 7. LIGHTBOX / GALERIA (LÓGICA ATUALIZADA) ---
+            
+            // Função para fechar o lightbox
+            const closeLightbox = () => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                lightboxImg.src = ""; // Reseta a imagem
+                lenis.start(); // Reativa o scroll suave
+                
+                // Reseta o estado da galeria
+                currentGalleryImages = [];
+                currentImageIndex = 0;
+            };
+
+            // Função para mostrar uma imagem específica da galeria
+            const showImage = (index) => {
+                if (index < 0 || index >= currentGalleryImages.length) {
+                    console.error("Index da galeria fora do limite.");
+                    return;
+                }
+
+                // Define a imagem principal
+                lightboxImg.src = currentGalleryImages[index];
+                currentImageIndex = index;
+
+                // Atualiza a visibilidade dos botões de navegação
+                if (index === 0) {
+                    lightboxPrev.classList.add('hidden');
+                } else {
+                    lightboxPrev.classList.remove('hidden');
+                }
+
+                if (index === currentGalleryImages.length - 1) {
+                    lightboxNext.classList.add('hidden');
+                } else {
+                    lightboxNext.classList.remove('hidden');
+                }
+            };
+
+            // Adiciona listener a cada card de projeto
+            projectCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    // Pega o 'data-images'
+                    const imagesString = card.dataset.images; 
+                    
+                    if (!imagesString) {
+                        // Fallback: Se não houver 'data-images', usa a imagem do card
+                        currentGalleryImages = [card.querySelector('img').src];
+                    } else {
+                        // Cria o array de imagens separando pela vírgula
+                        currentGalleryImages = imagesString.split(',').map(img => img.trim()); // .trim() remove espaços em branco
+                    }
+
+                    // Mostra a primeira imagem (index 0)
+                    showImage(0); 
+                    
+                    // Mostra o lightbox
+                    lightbox.classList.remove('hidden');
+                    lightbox.classList.add('flex');
+                    
+                    // Para o scroll da página
+                    lenis.stop();
+                });
+            });
+
+            // Listeners dos botões da galeria
+            lightboxNext.addEventListener('click', () => {
+                showImage(currentImageIndex + 1);
+            });
+
+            lightboxPrev.addEventListener('click', () => {
+                showImage(currentImageIndex - 1);
+            });
+
+            // Listeners para fechar o lightbox
+            lightboxClose.addEventListener('click', closeLightbox);
+            
+            lightbox.addEventListener('click', (e) => {
+                // Fecha o lightbox se o clique for no fundo (o próprio 'lightbox')
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+        });
+    </script>
+
+</body>
+</html>
